@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>DinoPru - Calorie Tracker</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,28 +11,28 @@
     <link rel="icon" href="favicon.ico">
     <meta name="theme-color" content="#10B981">
 </head>
-<body class="bg-gradient-to-br from-green-700 via-blue-900 to-orange-600 text-cream font-inter min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
-    <div class="forest-bg fixed inset-0 opacity-20 pointer-events=none"></div>
-    <header class="w-full max-w-2xl p-6 text-center">
-        <h1 class="text-4xl font-bold text-orange-500 animate-glow">DinoPru - Calorie Tracker</h1>
-        <p class="text-lg text-blue-300 mt-2">Power my 5kg weight gain journey!</p>
+<body class="bg-gradient-to-br from-green-700 via-blue-900 to-orange-600 text-cream font-inter min-h-screen flex flex-col items-center overflow-x-hidden">
+    <div class="forest-bg fixed inset-0 opacity-20 pointer-events-none"></div>
+    <header class="w-full max-w-lg p-4 sm:p-6 text-center">
+        <h1 class="text-2xl sm:text-3xl font-bold text-orange-500 animate-glow">DinoPru - Calorie Tracker</h1>
+        <p class="text-base sm:text-lg text-blue-300 mt-2">Power my 5kg weight gain journey!</p>
         <p class="text-sm text-cream">Runner’s Note: Add ~300–600 kcal on running days.</p>
     </header>
-    <main class="w-full max-w-2xl p-6 space-y-6">
-        <section class="bg-green-800 bg-opacity-60 p-4 rounded-xl shadow-glow">
-            <h2 class="text-xl text-orange-400">Daily Goal: <span id="calorieGoal">4000</span> kcal</h2>
-            <div class="w-full bg-blue-900 rounded-full h-4 mt-2">
-                <div id="progressBar" class="bg-orange-500 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+    <main class="w-full max-w-lg p-4 sm:p-6 space-y-4">
+        <section class="bg-green-800 bg-opacity-60 p-3 sm:p-4 rounded-xl shadow-glow">
+            <h2 class="text-lg sm:text-xl text-orange-400">Daily Goal: <span id="calorieGoal">4000</span> kcal</h2>
+            <div class="w-full bg-blue-900 rounded-full h-3 sm:h-4 mt-2">
+                <div id="progressBar" class="bg-orange-500 h-3 sm:h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
             </div>
-            <p class="mt-2 text-blue-200">Consumed: <span id="totalCalories">0</span> kcal</p>
-            <p class="text-cream">Remaining: <span id="remainingCalories">4000</span> kcal</p>
+            <p class="mt-2 text-blue-200 text-sm sm:text-base">Consumed: <span id="totalCalories">0</span> kcal</p>
+            <p class="text-cream text-sm sm:text-base">Remaining: <span id="remainingCalories">4000</span> kcal</p>
         </section>
-        <section class="space-y-4">
-            <h3 class="text-lg text-orange-400">Log Your Fuel</h3>
-            <div class="flex space-x-2">
-                <input id="foodInput" type="text" placeholder="Enter food (e.g., Chicken Salad)" class="flex-1 p-3 rounded-lg bg-blue-900 text-cream border border-green-500 focus:outline-none focus:ring-2 ring-orange-400">
-                <input id="calorieInput" type="number" placeholder="Calories" class="w-24 p-3 rounded-lg bg-blue-900 text-cream border border-green-500 focus:outline-none focus:ring-2 ring-orange-400">
-                <button id="addFoodBtn" class="p-3 bg-green-600 text-cream rounded-lg hover:bg-orange-500 ripple-btn transition-colors">Add</button>
+        <section class="space-y-3">
+            <h3 class="text-base sm:text-lg text-orange-400">Log Your Fuel</h3>
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                <input id="foodInput" type="text" placeholder="Enter food (e.g., Chicken Salad)" class="flex-1 p-2 sm:p-3 rounded-lg bg-blue-900 text-cream border border-green-500 focus:outline-none focus:ring-2 ring-orange-400 text-sm sm:text-base">
+                <input id="calorieInput" type="number" placeholder="Calories" class="w-24 p-2 sm:p-3 rounded-lg bg-blue-900 text-cream border border-green-500 focus:outline-none focus:ring-2 ring-orange-400 text-sm sm:text-base">
+                <button id="addFoodBtn" class="p-2 sm:p-3 bg-green-600 text-cream rounded-lg hover:bg-orange-500 ripple-btn transition-colors text-sm sm:text-base">Add</button>
             </div>
             <ul id="foodList" class="space-y-2"></ul>
         </section>
