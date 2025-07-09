@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+}
+
+body {
+    background: linear-gradient(135deg, #10B981, #1E40AF, #F97316);
+    overflow-x: hidden;
+}
+
+.forest-bg {
+    background: url('https://source.unsplash.com/random/1920x1080?forest') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.text-cream { color: #FFF7ED; }
+.text-orange-500 { color: #F97316; }
+.text-orange-400 { color: #FB923C; }
+.text-blue-300 { color: #93C5FD; }
+.text-blue-200 { color: #BFDBD8; }
+.bg-green-600 { background-color: #10B981; }
+.bg-orange-500 { background-color: #F97316; }
+.bg-blue-900 { background-color: #1E40AF; }
+.border-green-500 { border-color: #10B981; }
+.ring-orange-400 { --tw-ring-color: #FB923C; }
+.shadow-glow {
+    box-shadow: 0 0 8px #F97316, 0 0 16px #10B981;
+}
+
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.ripple-btn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(251, 146, 60, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
+
+.ripple-btn:active::after {
+    animation: none;
+}
+
+.ripple-btn:hover::after {
+    animation: ripple 0.6s linear;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #F97316, 0 0 10px #10B981; }
+    50% { text-shadow: 0 0 10px #F97316, 0 0 20px #10B981; }
+}

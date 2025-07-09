@@ -1,0 +1,20 @@
+{
+    "name": "CosmicCalorie",
+    "short_name": "CosmicCal",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#1a0933",
+    "theme_color": "#ff0077",
+    "icons": [
+        {
+            "src": "/balanced-diet.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/balanced-diet.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
